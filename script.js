@@ -30,5 +30,18 @@ btn.onclick = alertFunction;
 
 const btn2 = document.querySelector("#btn2");
 btn2.addEventListener("click", function (e) {
-  console.log(e.target);
+  e.target.style.background = "blue";
+});
+
+//next section
+
+//buttons is a nodelist, not an array.
+const buttons = document.querySelectorAll("button");
+
+//we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  //for each one we add a click event listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
 });

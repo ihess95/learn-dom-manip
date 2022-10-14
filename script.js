@@ -41,7 +41,10 @@ const buttons = document.querySelectorAll("button");
 //we use the .forEach method to iterate through each button
 buttons.forEach((button) => {
   //for each one we add a click event listener
-  button.addEventListener("click", () => {
-    alert(button.id);
+  // button.addEventListener("click", () => {
+  //   alert(button.id);
+  // });
+  button.addEventListener("dblclick", () => {
+    button.style.background = "green";
   });
 });
